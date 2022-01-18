@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="blog.xsl"?>
 <blog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-xsi:noNamespaceSchemaLocation="Blog.xsd">
+xsi:noNamespaceSchemaLocation="blog.xsd">
 
    <feed>
     <BlogId>123</BlogId>
@@ -74,12 +74,6 @@ xsi:noNamespaceSchemaLocation="Blog.xsd">
     <author>Mr Das</author>
     <comments>33</comments>
    </feed>
-
 </blog>
 
-<user>
-<f>
-   <tpc>loda mera</tpc>
-</f>
-</user>
 

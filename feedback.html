@@ -168,19 +168,19 @@
     
         How much you will rate us:<br>
         <ul>
-        <li><input type="checkbox" name="camp">1. Very Bad</li>
-        <li><input type="checkbox" name="camp">2. Bad</li>
-        <li><input type="checkbox" name="camp">3. Average</li> 
-        <li><input type="checkbox" name="camp">4. Good</li>
-        <li><input type="checkbox" name="camp">5. Very Good</li>
+        <li><input type="radio" name="camp">1. Very Bad</li>
+        <li><input type="radio" name="camp">2. Bad</li>
+        <li><input type="radio" name="camp">3. Average</li> 
+        <li><input type="radio" name="camp">4. Good</li>
+        <li><input type="radio" name="camp">5. Very Good</li>
         </ul><br>
 
         Where do you heard about us:<br>
         <ul>
-        <li><input type="radio" name="iu">Friends</li>
-        <li><input type="radio" name="iu">Television</li>
-        <li><input type="radio" name="iu">Internet</li>
-        <li><input type="radio" name="iu">Others</li>
+        <li><input type="checkbox" name="iu">Friends</li>
+        <li><input type="checkbox" name="iu">Television</li>
+        <li><input type="checkbox" name="iu">Internet</li>
+        <li><input type="checkbox" name="iu">Others</li>
         </ul>
         <br>
 
@@ -203,6 +203,10 @@
     <button id="btn5"  onclick="setCookie('color', 'demo')" type="submit">set Cookie color</button>
     <button id="btn6" onclick="deleteAllCookies('color')" type="button">delete Cookie color</button>
     <button id="btn7" onclick="displayCookieValue('color')" type="button">display Cookie color</button>
+    <br>
+    <button id="btn8" onclick="return saveData();" type="button">save data in Session storage</button>
+    <button id="btn9" onclick="return saveData1();" type="button">save data in Local storage</button>
+    <br>
     </div>
     <div id="value"></div>
 
@@ -287,6 +291,23 @@
           else
           return true;
       }
+
+      function saveData() 
+      { 
+        window.sessionStorage
+        var input = document.getElementById("psw").value;
+        sessionStorage.setItem("psw", input.value);
+        console.log(input);
+      } 
+       
+
+      function saveData1() 
+      { 
+        window.localStorage
+        var input = document.getElementById("uname");
+        localStorage.setItem("uname", input.value);
+        console.log(input);
+      } 
 
       var today = new Date();
         var expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000); // plus 30 days

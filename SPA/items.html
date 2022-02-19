@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+  <br><br>
+    <h3>Items</h3>
+    <center>
+        <div class="tables">
+      <strong><label>Search:</label></strong><input type="text" placeholder="Search By Name" ng-model="search"><br><br><br>
+      <strong><label>Sort By(HIGH to LOW):</label></strong><input type="radio" name="radio" ng-focus="sorting = 'price'; reverse=!reverse"><br>
+      <strong><label>Sort By(LOW to HIGH):</label></strong><input type="radio" name="radio" ng-focus="sorting = 'price'; reverse=!reverse"><br><br>
+         <table align="center" border="1">    
+           <tr>    
+                <th>Blog Author</th>
+                <th>Date of Post</th>
+                <th>Location</th>
+                <th>Topic</th>
+                <th>Comments</th>
+                <th>Likes</th>  
+           </tr>    
+           <tr ng-repeat="items in feed|filter:search|orderBy:sorting:reverse">   
+            <td>{{items.name}}</td>
+            <td>{{items.dop}}</td>
+            <td>{{items.location|uppercase}}</td>
+            <td>{{items.topic|lowercase}}</td> 
+            <td>{{items.commnts|number}}</td>   
+            <td>&#x1F44D;{{items.likes|number}}</td> 
+           </tr>    
+         </table>    
+        <div>
+          <br><br>
+</body>
+
+</html>

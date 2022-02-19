@@ -1,0 +1,8 @@
+{"roaster":[
+    {"BlogID":1234,"date":"2022-02-05","address":"Ahmedabad" ,"topic":"Balcot case" ,"likes":5000, "comnts":32},
+    {"BlogID":2245,"date":"2022-02-06","address":"Bengaluru" ,"topic":"Criminal Cases" ,"likes":7000, "comnts":35},
+    {"BlogID":3245,"date":"2022-02-07","address":"Vadodara" ,"topic":"K.M. Nanavati vs State of Maharashtra" ,"likes":15000, "comnts":85},
+    {"BlogID":9985,"date":"2022-02-08","address":"New Delhi" ,"topic":"Lal Bihari Identity Case" ,"likes":5500, "comnts":53},
+    {"BlogID":2278,"date":"2022-02-09","address":"Mohali" ,"topic":"Tarakeswar Case" ,"likes":8900, "comnts":46},
+    {"BlogID":5278,"date":"2022-02-10","address":"Chandigarh" ,"topic":"Bhawal Case" ,"likes":6500, "comnts":25}
+]}  

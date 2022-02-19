@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"> </script>
+
+  <link rel="stylesheet" href="signin.css" />
+  <link rel="stylesheet" href="style.css">
+  <title>Dashboard</title>
+  <script src="angular.min.js"></script>
+  <script src="roaster.js"></script>
+</head>
+
+<body>
+  <br>
+  <label for="rowsToBeDisplayed">Display:</label>
+  <input type="number" step="1" min="0" max="10" ng-model="rowlimit" placeholder="Number of rows to be displayed...">
+
+  <div class="dark" ng-controller="roaster_ctrl">
+
+    <h3><i class="fa fa-users"></i> DATA LIST</h3>
+    <table class="styled-table">
+      <thead>
+
+        </tr>
+        <tr>
+          <th><input type="search" placeholder="Search Blog ID" ng-model="search.BlogID" /></th>
+          <th><input type="search" placeholder="Search Date" ng-model="search.date" /></th>
+          <th><input type="search" placeholder="Search address" ng-model="search.address" /></th>
+          <th><input type="search" placeholder="Search Topic" ng-model="search.topic" /></th>
+          <th><input type="search" placeholder="Search Likes" ng-model="search.likes" /></th>
+          <th><input type="search" placeholder="Search comments" ng-model="search.comnts" /></th>
+        </tr>
+        <tr>
+          <th>Blog No</th>
+          <th>Date</th>
+          <th>Address</th>
+          <th>Topic</th>
+          <th>Likes</th>
+          <th>Comments</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="x in r_list | filter:search |limitTo:rowlimit">
+          <td scope="row">{{x.BlogID}}</td>
+          <td>{{x.date | date}}</td>
+          <td>{{x.address | uppercase }}</td>
+          <td>{{x.topic | lowercase | name}}</td>
+          <td>{{x.likes | number}}</td>
+          <td>{{x.comnts | number}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
